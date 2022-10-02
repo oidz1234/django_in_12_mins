@@ -1,0 +1,10 @@
+<h1> Welcome to the blog </h1>
+{% if posts %}
+    <ul>
+        {% for post in posts %}
+            <li><a href="/blog/post/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> There are no blog posts :( </p>
+{% endif %}
